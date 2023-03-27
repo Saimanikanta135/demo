@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./jack.jpg);
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 5px 5px 5px black;
+         }
+         #container{
+            width: 1100px;
+            height: 350px;
+            background-color:black;
+            display: flex;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            box-shadow: 10px 10px 10px palevioletred,-10px -10px 10px purple ;
+        
+         }
+         #sub{
+            width:200px;
+            height: 200px;
+            background-color: rgb(243, 156, 44);
+            border-radius: 25px;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            box-shadow: 5px 5px 5px white, -5px -5px 5px white ;
+            justify-content: center;
+            font-size: 60px;
+            color: blue;
+             }
+             #sub1{
+            width:200px;
+            height: 200px;
+            background-color: rgb(243, 156, 44);
+            box-shadow: 5px 5px 5px white, -5px -5px 5px white ;
+            border-radius: 25px;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: crimson;
+             }
+             #sub2{
+            width:200px;
+            height: 200px;
+            background-color: rgb(243, 156, 44);
+            box-shadow: 5px 5px 5px white, -5px -5px 5px white ;
+            border-radius: 25px;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: darkmagenta;
+             }
+             #sub3{
+            width:200px;
+            height: 200px;
+            background-color: rgb(243, 156, 44);
+            border: 5px solid black;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px white, -5px -5px 5px white ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: calc();
+             }
+             #jackpot{
+                position: absolute;
+                bottom: 50px;
+                width: 250px;
+                height: 60px;
+                font-size: 30px;
+                letter-spacing: 5px;
+                border-radius: 8px;
+                background-color: darkmagenta;
+                color: white;
+                box-shadow: 3px 3px 3px palevioletred,-3px -3px 3px palevioletred;
+             }
+        
+             
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div type="text" id="sub">$</div>
+        <div type="text" id="sub1">$</div>
+        <div type="text" id="sub2">$</div>
+        <div type="text" id="sub3">$</div>
+
+    </div>
+    <input type="button" value="Jackpot" id="jackpot" onclick="but()">
+    <script>
+        function but()
+        {
+      var a=Math.floor(Math.random()*4)
+      document.getElementById("sub").innerHTML=a
+     
+        
+        var b=Math.floor(Math.random()*4)
+      document.getElementById("sub1").innerHTML=b
+     
+      var c=Math.floor(Math.random()*4)
+      document.getElementById("sub2").innerHTML=c
+     
+      var d=Math.floor(Math.random()*4)
+      document.getElementById("sub3").innerHTML=d
+    
+      if(a==b&&a==c&&a==d)
+      {
+        document.getElementById("container").style.backgroundImage= " url(./gif.gif)"
+        document.getElementById("container").innerHTML="congratulations"
+        document.getElementById("container").style.fontSize="100px"
+        document.getElementById("container").style.color="red"
+
+
+      }
+        }
+    </script>
+    
+    
+</body>
+</html>
